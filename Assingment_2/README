@@ -1,1 +1,79 @@
+1. Project Overview
+This project implements an Autonomous Research Agent using the LangChain framework and Groq’s LLaMA-3.3-70B model. The agent is designed to perform end-to-end research on any given topic by autonomously browsing the web, extracting key insights from Wikipedia, and synthesizing the findings into a formal, structured professional report.
 
+Unlike a standard chatbot, this system uses ReAct (Reasoning and Acting) logic to determine which tool to use at each step to ensure the data is grounded in real-time information.
+
+2. Student Information
+Name: Md Mashroof Kalim
+
+System ID: 2023479862
+
+Batch: 2023 - 2027
+
+Course: B. Tech. CSE [6th Semester]
+
+University: Sharda University
+
+3. Key Features
+Autonomous Search: Uses DuckDuckGo and Wikipedia APIs to gather multi-source data.
+
+ReAct Logic: The agent "thinks" before acting, deciding whether it needs a broad web search or a deep-dive Wikipedia summary.
+
+Structured Formatting: Automatically generates reports following a strict academic template (Introduction, Key Findings, Challenges, Future Scope, and Conclusion).
+
+High-Speed Inference: Powered by Groq LPU (Language Processing Unit) for near-instant report generation.
+
+4. Tech Stack
+Orchestration: LangChain
+
+LLM: Groq (llama-3.3-70b-versatile)
+
+Tools:
+
+DuckDuckGoSearchRun: For real-time web trends and news.
+
+WikipediaQueryRun: For historical context and factual summaries.
+
+Environment: Python 3.10+ (Google Colab / Jupyter)
+
+5. Installation & Setup
+Prerequisites
+You will need a Groq API Key. You can get one for free at console.groq.com.
+
+Install Dependencies
+Bash
+pip install -q langchain langchain-community langchain-groq duckduckgo-search wikipedia
+Configuration
+Set your API key in your environment or script:
+
+Python
+import os
+os.environ["GROQ_API_KEY"] = "your_gsk_key_here"
+6. How It Works
+Input: User provides a topic (e.g., "Impact of AI in Healthcare").
+
+Reasoning: The Agent analyzes the prompt and decides to use duckduckgo_search for current 2026 trends.
+
+Augmentation: The Agent then uses wikipedia to gather established definitions and history.
+
+Synthesis: The LLM summarizes the raw data into a cohesive narrative.
+
+Output: A formatted .txt or Markdown report is generated and saved.
+
+7. Sample Output Structure
+The generated reports follow this mandatory format:
+
+Cover Page: Title, Date, and Agent Details.
+
+Introduction: 150+ words on background and purpose.
+
+Key Findings: Bulleted facts and statistics.
+
+Challenges: Current hurdles and ethical concerns.
+
+Future Scope: Emerging trends (2026-2030).
+
+Conclusion: Final recommendations.
+
+8. License
+This project is part of the academic curriculum for B. Tech. CSE at Sharda University.
